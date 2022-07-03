@@ -1,11 +1,11 @@
-#include <iostream>
-
 /*
  A multi-line comment
 */
+#include <stdio.h>
+
 int main()
 {
-    // A single line comment
-    std::cout << "Hello World" /* an in-line comment */ << std::endl;
+    printf("2 Hello World");
+
     return 0;
 }
