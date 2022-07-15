@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "G++ Debug (+Warnings) Build",
+            "type": "shell",
+            "command": "'C:\\msys64\\mingw64\\bin\\g++.exe'",
+            "args": [
+                "-Wall",
+                "-g",
+                "'${file}'",
+                "-o",
+                "'${fileWorkspaceFolder}\\bin\\Debug\\${fileBasenameNoExtension}.exe'",
+                "&&",
+                "'${fileWorkspaceFolder}\\bin\\Debug\\${fileBasenameNoExtension}.exe'"
+            ],
+            "problemMatcher": "$gcc",
+        },
+        {
+            "label": "Debug Build Create Output Folder",
+            "type": "shell",
+            "command": "mkdir",
+            "args": [              
+                "-p",
+                "'${fileWorkspaceFolder}\\bin\\Debug'",
+            ]
+        },
+        {
+            "label": "G++ Debug (+Warnings) Build and Run",
+            "dependsOn": ["Debug Build Create Output Folder", "G++ Debug (+Warnings) Build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+            }
+        }
+    ]
+}
