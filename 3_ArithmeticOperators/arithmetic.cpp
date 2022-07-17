@@ -16,6 +16,7 @@ int main()
        */
     std::cout << "Arithmetic Operators" << std::endl;
     
+    std::cout << "The value of X = (2+3) + 1 * 4 is " << (2+3) + 1 * 4 << std::endl;
 
     return 0;
 }
