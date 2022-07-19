@@ -18,5 +18,11 @@ int main()
     
     std::cout << "The value of X = (2+3) + 1 * 4 is " << (2+3) + 1 * 4 << std::endl;
 
+    // *** Unary operators, in order of precedence ***
+    // Unary +, can promote a short to an integer if sizeof(short) < sizeof(int) on platform
+    short littleVariable = 123;
+    std::cout << "littleVariable is " << sizeof(littleVariable) << " bytes" << std::endl;
+    std::cout << "+littleVariable is " << sizeof(+littleVariable) << " bytes" << std::endl;
+
     return 0;
 }
